@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  
+<%- include('partials/header') %>
+
+  <h1>Product List</h1>
+  <div class="product-grid">
+    <% products.forEach((p, index) => { %>
+      <div class="product-card">
+        <img src="<%= p.image %>" alt="<%= p.name %>">
+        <h3><%= p.name %></h3>
+        <a href="/product/<%= index %>"><button>Details</button></a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
+
+

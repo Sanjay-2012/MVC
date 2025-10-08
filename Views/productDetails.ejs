@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= product.name %> Details</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <%- include('partials/header') %>
+
+  <div class="product-details">
+    <img src="<%= product.image %>" alt="<%= product.name %>">
+    <h2><%= product.name %></h2>
+    <p><%= product.description %></p>
+    <a href="/"><button>Back to Home</button></a>
+  </div>
+</body>
+</html>
